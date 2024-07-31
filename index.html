@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="firstPage">
         <div class="overlay"></div>
         <div class="container">
             <h1>I'm Noora Hussain.</h1>
-            <div class="social-icons">
+            <div class="social-icons" >
                 <a href="https://github.com/nooraphussain" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:noorahussainp2002@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/noora-hussain-89bb291b7/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <section id="education-work-skills" style="background-color: #211b24; padding: 50px 20px;">
+    <section id="education-work-skills" style="background-color: #29232f; padding: 50px 20px;">
         <div class="container">
             <div class="education">
                 <div class="section-title">
@@ -174,30 +174,42 @@
     <section id="contact">
         <div class="contact-container">
             <div class="contact-title">
-                <h2>Contact Me</h2>
+                <h2><span class="emoji"> &#128172;</span> Get in touch.</h2>
             </div>
-            <form>
-                <div class="form-group">
-                    <input type="text" name="name" id="name" required>
-                    <label for="name"><i class="fas fa-user"></i> Your Name</label>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="     Enter your name" required>
+                            <label for="name"><i class="fas fa-user"></i></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="     Enter mail id" required>
+                            <label for="email"><i class="fas fa-envelope"></i></label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" placeholder="     Message" required></textarea>
+                            <label for="message"><i class="fas fa-pencil-alt"></i></label>
+                        </div>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" required>
-                    <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:noorahussainp2002@gmail.com" target = "_blank">noorahussainp2002@gmail.com</a></p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/nooraphussain" target="_blank">nooraphussain</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/nooraphussain" target="_blank">nooraphussain</a></p>
                 </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" required></textarea>
-                    <label for="message"><i class="fas fa-pencil-alt"></i> Your Message</label>
-                </div>
-                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-            </form>
+            </div>
+            <div class="scroll-up">
+                <a href="#firstPage"><i class="fas fa-chevron-up"></i></a>
+            </div>
         </div>
-    </section>
+    </section>    
 
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Noora Hussain. All rights reserved.</p>
         </div>
-    </footer>
+    </footer>    
 </body>
 </html>

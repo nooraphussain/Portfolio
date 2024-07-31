@@ -73,6 +73,7 @@ h1 {
     color: #000;
 }
 
+
 .scroll-down {
     position: absolute;
     bottom: -275px; /* Position it close to the bottom */
@@ -80,13 +81,23 @@ h1 {
     transform: translateX(-50%);
 }
 
-.scroll-down a {
+.scroll-up {
+    position: absolute; /* Changed from absolute to fixed for better positioning */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-down a, .scroll-up a {
     color: #fff;
     font-size: 2em;
     transition: color 0.3s;
 }
 
-.scroll-down a:hover {
+.scroll-up a {
+    bottom: 20px;
+}
+
+.scroll-down a:hover, .scroll-up a:hover {
     color: #ffa500;
 }
 
@@ -121,7 +132,7 @@ h1 {
     color: #fff;
     text-align: left;
     padding: 50px 20px;
-    background-color: #211b24;
+    background-color: #29232f;
 }
 
 #education-work-skills .container {
@@ -216,21 +227,113 @@ h1 {
 }
 
 #contact {
-    padding: 50px 20px;
-    background: #333;
-    text-align: center;
+    padding: 70px 20px;
+    background: #322c3a;
+    color: #fff;
+}
+
+#contact .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #contact h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-#contact p {
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact .contact-form {
+    width: 60%;
+}
+
+#contact .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #444;
+    color: #fff;
+}
+
+#contact .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    font-size: 1em; /* Ensure the label font size is consistent */
+}
+
+#contact .form-group input:focus + label,
+#contact .form-group textarea:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: #ffa500;
+}
+
+#contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: #ffa500;
+    color: #000;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact .btn:hover {
+    background: #cc8400;
+}
+
+#contact .contact-info {
+    width: 35%;
+    padding-left: 20px;
+    border-left: 2px solid #444;
+}
+
+#contact .contact-info p {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
-#contact i {
+#contact .contact-info i {
     margin-right: 10px;
+}
+
+#contact .contact-info a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+#contact .contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #463d51;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content p {
+    margin: 0;
 }
