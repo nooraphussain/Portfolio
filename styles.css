@@ -47,17 +47,17 @@ h1 {
 }
 
 .social-icons a:hover {
-    color: #ffa500;
+    color: #8e600b;
 }
 
 .buttons {
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .btn {
     text-decoration: none;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid #ffa500;
     padding: 10px 20px;
     margin: 0 10px;
     transition: background 0.3s, color 0.3s;
@@ -75,7 +75,7 @@ h1 {
 
 .scroll-down {
     position: absolute;
-    bottom: -300px; /* Position it close to the bottom */
+    bottom: -275px; /* Position it close to the bottom */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -94,7 +94,7 @@ h1 {
 
 #about {
     padding: 50px 20px;
-    background: #333;
+    background: #1f1b24;
     color: #fff;
     display: flex;
     align-items: center;
@@ -108,13 +108,17 @@ h1 {
 }
 
 .about-container img {
-    max-width: 200px;
-    border-radius: 50%;
+    width: 25%; /* Fixed width */
+    height: 25%; /* Fixed height to make it square */
+    border-radius: 10%; /* Optional rounded corners */
     margin-right: 20px;
+    margin-left: 0; /* Move image towards left */
+    display: block; /* Ensure it behaves like a block */
 }
 
 .about-text {
     max-width: 600px;
+    margin-left: 70px;
 }
 
 #contact {
