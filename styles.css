@@ -73,7 +73,6 @@ h1 {
     color: #000;
 }
 
-
 .scroll-down {
     position: absolute;
     bottom: -275px; /* Position it close to the bottom */
@@ -114,14 +113,15 @@ h1 {
 .about-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
 }
 
 .about-container img {
-    width: 25%;
+    width: 100%; /* Make image responsive */
+    max-width: 25%; /* Set max-width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10%;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 20px; /* Added margin */
 }
 
 .about-text {
@@ -144,13 +144,13 @@ h1 {
 
 #education-work-skills .section-title {
     margin-bottom: 20px;
-    width: 20%;
+    width: 100%; /* Make it responsive */
     text-align: left;
 }
 
 #education-work-skills .section-content {
     margin-bottom: 30px;
-    width: 75%;
+    width: 100%; /* Make it responsive */
     text-align: left;
 }
 
@@ -159,6 +159,7 @@ h1 {
 #education-work-skills .skills {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
 }
 
 #education-work-skills h3 {
@@ -208,7 +209,8 @@ h1 {
 
 #education-work-skills .skill {
     margin: 15px 0;
-    width: 45%;
+    width: 100%; /* Make it responsive */
+    max-width: 45%; /* Set max-width */
     margin-right: 5%;
 }
 
@@ -247,10 +249,12 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
 }
 
 #contact .contact-form {
-    width: 60%;
+    width: 100%; /* Make it responsive */
+    max-width: 60%; /* Set max-width */
 }
 
 #contact .form-group {
@@ -304,7 +308,8 @@ h1 {
 }
 
 #contact .contact-info {
-    width: 35%;
+    width: 100%; /* Make it responsive */
+    max-width: 35%; /* Set max-width */
     padding-left: 20px;
     border-left: 2px solid #444;
 }
@@ -336,4 +341,83 @@ footer {
 
 .footer-content p {
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #contact .contact-form, #contact .contact-info {
+        width: 100%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .btn {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .scroll-down, .scroll-up {
+        bottom: -200px; /* Adjust as needed */
+    }
+
+    .about-container {
+        text-align: center;
+    }
+
+    #education-work-skills .skills-category {
+        text-align: center;
+    }
+
+    #education-work-skills .skill {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact .contact-form {
+        max-width: 100%;
+    }
+
+    #contact .contact-info {
+        max-width: 100%;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
+
+    #contact h2 {
+        font-size: 1.5em;
+    }
+
+    #contact .form-group label {
+        font-size: 0.8em;
+    }
 }
