@@ -113,7 +113,7 @@ h1 {
 .about-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
 }
 
 .about-container img {
@@ -122,11 +122,33 @@ h1 {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10%;
     margin: 20px; /* Added margin */
+    margin-left: 60px;
 }
 
 .about-text {
-    max-width: 750px;
+    max-width: 800px;
+    margin-left: 85px;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .about-container img {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    .about-text {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-top: 20px; /* Add top margin for spacing */
+        text-align: center; /* Center text */
+    }
+}
+
 
 #education-work-skills {
     color: #fff;
@@ -144,13 +166,13 @@ h1 {
 
 #education-work-skills .section-title {
     margin-bottom: 20px;
-    width: 100%; /* Make it responsive */
+    width: 100%;
     text-align: left;
 }
 
 #education-work-skills .section-content {
     margin-bottom: 30px;
-    width: 100%; /* Make it responsive */
+    width: 100%;
     text-align: left;
 }
 
@@ -159,7 +181,7 @@ h1 {
 #education-work-skills .skills {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
+    flex-wrap: wrap;
 }
 
 #education-work-skills h3 {
@@ -201,7 +223,7 @@ h1 {
 }
 
 #education-work-skills .skills-category h5 {
-    font-size: 1.2em; /* Adjust font size for h5 tags */
+    font-size: 1.2em;
     margin-bottom: 10px;
     color: #ffa500;
     width: 100%;
@@ -209,8 +231,8 @@ h1 {
 
 #education-work-skills .skill {
     margin: 15px 0;
-    width: 100%; /* Make it responsive */
-    max-width: 45%; /* Set max-width */
+    width: 100%;
+    max-width: 45%;
     margin-right: 5%;
 }
 
@@ -227,6 +249,19 @@ h1 {
     background: #b97b08;
     border-radius: 5px;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #education-work-skills .skills-category {
+        flex-direction: column;
+    }
+
+    #education-work-skills .skill {
+        max-width: 100%; /* Make each skill take the full width */
+        margin-right: 0; /* Remove right margin for mobile view */
+    }
+}
+
 
 #contact {
     padding: 70px 20px;
