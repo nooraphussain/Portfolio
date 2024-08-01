@@ -405,8 +405,12 @@ footer {
         font-size: 1em;
     }
 
-    .scroll-down, .scroll-up {
+    .scroll-down {
         bottom: -200px; /* Adjust as needed */
+    }
+
+    .scroll-up {
+        bottom: auto;
     }
 
     .about-container {
@@ -425,6 +429,7 @@ footer {
     #contact .contact-content {
         flex-direction: column;
         align-items: center;
+        margin-right: 25px;
     }
 
     #contact .contact-form {
