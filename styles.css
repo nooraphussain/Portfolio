@@ -33,6 +33,7 @@ header {
 h1 {
     font-size: 4em;
     margin: 0;
+    text-shadow: 5px 5px #463d51;
 }
 
 .social-icons {
