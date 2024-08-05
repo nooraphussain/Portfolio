@@ -1,0 +1,463 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    color: #fff;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background: url('img.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #8e600b;
+}
+
+.buttons {
+    margin: 40px 0;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #ffa500;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 25px;
+}
+
+.resume {
+    border-color: #ffa500;
+}
+
+.btn:hover {
+    background: #ffa500;
+    color: #000;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: -275px; /* Position it close to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-up {
+    position: absolute; /* Changed from absolute to fixed for better positioning */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-down a, .scroll-up a {
+    color: #fff;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.scroll-up a {
+    bottom: 20px;
+}
+
+.scroll-down a:hover, .scroll-up a:hover {
+    color: #ffa500;
+}
+
+#about {
+    padding: 50px 20px;
+    background: #1f1b24;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.about-container img {
+    width: 100%; /* Make image responsive */
+    max-width: 25%; /* Set max-width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%;
+    margin: 20px; /* Added margin */
+    margin-left: 60px;
+}
+
+.about-text {
+    max-width: 800px;
+    margin-left: 85px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .about-container img {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    .about-text {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-top: 20px; /* Add top margin for spacing */
+        text-align: center; /* Center text */
+    }
+}
+
+
+#education-work-skills {
+    color: #fff;
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #29232f;
+}
+
+#education-work-skills .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#education-work-skills .section-title {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+#education-work-skills .section-content {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+#education-work-skills .education, 
+#education-work-skills .work, 
+#education-work-skills .skills {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#education-work-skills h3 {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#education-work-skills .underline {
+    width: 90px;
+    height: 3px;
+    background-color: #ffa500;
+    margin-bottom: 20px;
+}
+
+#education-work-skills p {
+    margin: 20px 0;
+}
+
+#education-work-skills .job {
+    margin-bottom: 20px;
+}
+
+.section-divider {
+    border: 1px solid #444;
+    margin: 30px 0;
+}
+
+#education-work-skills .skills-category {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#education-work-skills .skills-category h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffa500;
+    width: 100%;
+}
+
+#education-work-skills .skills-category h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffa500;
+    width: 100%;
+}
+
+#education-work-skills .skill {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 45%;
+    margin-right: 5%;
+}
+
+#education-work-skills .skill-bar {
+    width: 100%;
+    background: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#education-work-skills .skill-level {
+    height: 100%;
+    background: #b97b08;
+    border-radius: 5px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #education-work-skills .skills-category {
+        flex-direction: column;
+    }
+
+    #education-work-skills .skill {
+        max-width: 100%; /* Make each skill take the full width */
+        margin-right: 0; /* Remove right margin for mobile view */
+    }
+}
+
+
+#contact {
+    padding: 70px 20px;
+    background: #322c3a;
+    color: #fff;
+}
+
+#contact .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Added flex-wrap to make it responsive */
+}
+
+#contact .contact-form {
+    width: 100%; /* Make it responsive */
+    max-width: 60%; /* Set max-width */
+}
+
+#contact .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #444;
+    color: #fff;
+}
+
+#contact .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    font-size: 1em; /* Ensure the label font size is consistent */
+}
+
+#contact .form-group input:focus + label,
+#contact .form-group textarea:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: #ffa500;
+}
+
+#contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: #ffa500;
+    color: #000;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact .btn:hover {
+    background: #cc8400;
+}
+
+#contact .contact-info {
+    width: 100%; /* Make it responsive */
+    max-width: 35%; /* Set max-width */
+    padding-left: 20px;
+    border-left: 2px solid #444;
+}
+
+#contact .contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info i {
+    margin-right: 10px;
+}
+
+#contact .contact-info a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+#contact .contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #463d51;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #contact .contact-form, #contact .contact-info {
+        width: 100%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .btn {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .scroll-down {
+        bottom: -200px; /* Adjust as needed */
+    }
+
+    .scroll-up {
+        bottom: auto;
+    }
+
+    .about-container {
+        text-align: center;
+    }
+
+    #education-work-skills .skills-category {
+        text-align: center;
+    }
+
+    #education-work-skills .skill {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 25px;
+    }
+
+    #contact .contact-form {
+        max-width: 100%;
+    }
+
+    #contact .contact-info {
+        max-width: 100%;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
+
+    #contact h2 {
+        font-size: 1.5em;
+    }
+
+    #contact .form-group label {
+        font-size: 0.8em;
+    }
+}
